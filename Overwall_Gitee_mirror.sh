@@ -22,6 +22,7 @@ sed -i 's#https://cdn.jsdelivr.net/gh/fangxx3863/overwall_list/China_IPv6List#ht
 sed -i 's#https://cdn.jsdelivr.net/gh/fangxx3863/overwall_list/GFW_List#https://gitee.com/fangxx3863/overwall_backup/raw/master/KkFCtZkeAP/avtPeqDKt645Arm#g' ${root}/update
 
 
+
 # 防火墙规则部分(GITHUB)
 sed -i 's#https://raw.githubusercontent.com/fangxx3863/overwall_list/main/China_IPList#https://raw.githubusercontent.com/yIwIoTT9A21nupT/2aXGmlWs/master/KkFCtZkeAP/eFw58nNRXXfTwU4#g' ${root}/update
 sed -i 's#https://raw.githubusercontent.com/fangxx3863/overwall_list/main/China_IPv6List#https://raw.githubusercontent.com/yIwIoTT9A21nupT/2aXGmlWs/master/KkFCtZkeAP/t8eOh94EJIHTXR6#g' ${root}/update
