@@ -1,0 +1,65 @@
+#!/bin/sh
+[ "$1" = --down ] || exit 1
+K=/tmp/overwall/bin
+#K=/root/test
+T=$K/tmp
+A=$K/all1
+B=$K/all2
+kill -9 $(ps -w | grep $T | grep -v grep | awk '{print$1}') 2>/dev/null
+mkdir -p $K
+if [ $2 = 1 ];then
+	while ! curl -m 9 -Lfso $T https://gitee.com/fangxx3863/overwall_backup/raw/master/ONywPfH3Rh/pWgXrfGEV6Vtmhy_1.part1;do
+		sleep 2
+	done
+	cat $T >> $A
+	while ! curl -m 9 -Lfso $T https://gitee.com/fangxx3863/overwall_backup/raw/master/ONywPfH3Rh/pWgXrfGEV6Vtmhy_2.part1;do
+		sleep 2
+	done
+	cat $T >> $A
+	while ! curl -m 9 -Lfso $T https://gitee.com/fangxx3863/overwall_backup/raw/master/ONywPfH3Rh/pWgXrfGEV6Vtmhy_3.part1;do
+		sleep 2
+	done
+	cat $T >> $A
+	while ! curl -m 9 -Lfso $T https://gitee.com/fangxx3863/overwall_backup/raw/master/ONywPfH3Rh/pWgXrfGEV6Vtmhy_4.part1;do
+		sleep 2
+	done
+	cat $T >> $A
+	while ! curl -m 9 -Lfso $T https://gitee.com/fangxx3863/overwall_backup/raw/master/ONywPfH3Rh/pWgXrfGEV6Vtmhy_5.part1;do
+		sleep 2
+	done
+	cat $T >> $A
+	while ! curl -m 9 -Lfso $T https://gitee.com/fangxx3863/overwall_backup/raw/master/ONywPfH3Rh/pWgXrfGEV6Vtmhy_6.part1;do
+		sleep 2
+	done
+	cat $T >> $A
+
+	base64 -d $A > $K/xray
+	chmod +x $K/xray
+fi
+if [ $3 = 1 ];then
+	while ! curl -m 9 -Lfso $T https://gitee.com/fangxx3863/overwall_backup/raw/master/ONywPfH3Rh/AlCdr6hj5qHCJmp_1.part2;do
+		sleep 2
+	done
+	cat $T >> $B
+	while ! curl -m 9 -Lfso $T https://gitee.com/fangxx3863/overwall_backup/raw/master/ONywPfH3Rh/AlCdr6hj5qHCJmp_2.part2;do
+		sleep 2
+	done
+	cat $T >> $B
+	while ! curl -m 9 -Lfso $T https://gitee.com/fangxx3863/overwall_backup/raw/master/ONywPfH3Rh/AlCdr6hj5qHCJmp_3.part2;do
+		sleep 2
+	done
+	cat $T >> $B
+	while ! curl -m 9 -Lfso $T https://gitee.com/fangxx3863/overwall_backup/raw/master/ONywPfH3Rh/AlCdr6hj5qHCJmp_4.part2;do
+		sleep 2
+	done
+	cat $T >> $B
+	while ! curl -m 9 -Lfso $T https://gitee.com/fangxx3863/overwall_backup/raw/master/ONywPfH3Rh/AlCdr6hj5qHCJmp_5.part2;do
+		sleep 2
+	done
+	base64 -d $B > $K/xray-plugin
+	chmod +x $K/xray-plugin
+fi
+rm -f $A
+rm -f $B
+rm -f $T
+[ $4 = 0 ] && /etc/init.d/overwall start &
