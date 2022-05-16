@@ -42,7 +42,7 @@ sed -i 's#TG_IPList#ufk8kHo4ZpsOekg#g' ${root}/preload
 
 
 # K2P_16M架构BIN下载部分
-while ! curl -m 9 -Lfso ${root}/downbin https://gitee.com/fangxx3863/overwall_backup/raw/master/downbin;do
+while ! curl -m 9 -Lfso ${root}/downbin https://github.com/icecoke1024/overwall_backup/raw/master/downbin;do
 		sleep 2
 done
 chmod +x ${root}/downbin
