@@ -28,7 +28,7 @@ sed -i 's#https://github.com/icecoke1024/overwall_backup/blob/master/KkFCtZkeAP/
 sed -i 's#https://github.com/icecoke1024/overwall_backup/raw/master/KkFCtZkeAP#g' ${root}/preload
 sed -i 's#https://github.com/icecoke1024/overwall_backup/raw/master/KkFCtZkeAP#g' ${root}/preload
 
-sed -i 's#https://raw.githubusercontent.com/fangxx3863/overwall_list/main/Bypass#https://github.com/icecoke1024/overwall_backup/tree/master/KkFCtZkeAP#g' ${root}/preload
+sed -i 's#https://github.com/icecoke1024/overwall_backup/tree/master/KkFCtZkeAP#g' ${root}/preload
 # NF
 sed -i 's#NF_IPList_Small#MnwTZoJKZA7F3xf#g' ${root}/preload
 sed -i 's#NF_IPList_Big#S1WMOUf0VmdLPT9#g' ${root}/preload
